@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavAI - Documentation & Career Growth</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<script>
+  // Check authentication before loading main content
+  if (!localStorage.getItem('navai_user')) {
+    window.location.href = 'index.html'; // Redirect to React app which shows login
+  }
+</script>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="main-layout">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-container">
+                <!-- Brand Section -->
+                <div class="brand-section">
+                    <a href="#" class="logo">
+                        <i class="fas fa-compass"></i>
+                        <span class="brand-name">NavAI</span>
+                    </a>
+                </div>
+
+                <!-- Top Navigation -->
+                <nav class="top-nav">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Resume Builder</a>
+                    <a href="#" class="nav-link">Resume Screener</a>
+                    <a href="#" class="nav-link">AI Interview</a>
+                    <a href="#" class="nav-link">Generate Interview Questions</a>
+                </nav>
+
+                <!-- Header Right Section -->
+                <div class="header-right">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search documentation...">
+                    </div>
+                    <button class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <nav class="sidebar-nav">
+                    <!-- Home Overview Section -->
+                    <div class="nav-section">
+                        <div class="nav-item active" data-section="home-overview">
+                            <i class="fas fa-home"></i>
+                            <span>Home Overview</span>
+                        </div>
+                    </div>
+
+                    <!-- Resume Builder Section -->
+                    <div class="nav-section">
+                        <div class="nav-item expandable" data-section="resume-builder">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Resume Builder Guide</span>
+                            <i class="fas fa-chevron-right expand-icon"></i>
+                        </div>
+                        <div class="sub-nav" id="resume-builder-sub">
+                            <div class="sub-nav-item">Getting Started</div>
+                            <div class="sub-nav-item">Templates</div>
+                            <div class="sub-nav-item">AI Assistance</div>
+                            <div class="sub-nav-item">Best Practices</div>
+                        </div>
+                    </div>
+
+                    <!-- Resume Screener Section -->
+                    <div class="nav-section">
+                        <div class="nav-item expandable" data-section="resume-screener">
+                            <i class="fas fa-search"></i>
+                            <span>Resume Screener Guide</span>
+                            <i class="fas fa-chevron-right expand-icon"></i>
+                        </div>
+                        <div class="sub-nav" id="resume-screener-sub">
+                            <div class="sub-nav-item">How It Works</div>
+                            <div class="sub-nav-item">Scoring System</div>
+                            <div class="sub-nav-item">Optimization Tips</div>
+                        </div>
+                    </div>
+
+                    <!-- AI Interview Section -->
+                    <div class="nav-section">
+                        <div class="nav-item expandable" data-section="ai-interview">
+                            <i class="fas fa-robot"></i>
+                            <span>AI Interview Guide</span>
+                            <i class="fas fa-chevron-right expand-icon"></i>
+                        </div>
+                        <div class="sub-nav" id="ai-interview-sub">
+                            <div class="sub-nav-item">Mock Interviews</div>
+                            <div class="sub-nav-item">Question Types</div>
+                            <div class="sub-nav-item">Performance Analysis</div>
+                        </div>
+                    </div>
+
+                    <!-- Generate Questions Section -->
+                    <div class="nav-section">
+                        <div class="nav-item expandable" data-section="generate-questions">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Generate Questions Guide</span>
+                            <i class="fas fa-chevron-right expand-icon"></i>
+                        </div>
+                        <div class="sub-nav" id="generate-questions-sub">
+                            <div class="sub-nav-item">Question Categories</div>
+                            <div class="sub-nav-item">Difficulty Levels</div>
+                            <div class="sub-nav-item">Customization Options</div>
+                        </div>
+                    </div>
+
+                    <!-- Help Section -->
+                    <div class="nav-section">
+                        <div class="nav-item" data-section="help">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Help / FAQ</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Page Title -->
+            <div class="content-header">
+                <h1 class="page-title">NavAI Documentation</h1>
+                <p class="page-subtitle">
+                    Your comprehensive guide to career growth and professional development.
+                    Discover tools, resources, and strategies to accelerate your career journey.
+                </p>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="content-grid">
+                <!-- Get Started Card -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="card-title">Get Started with NavAI</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Welcome to NavAI! Our comprehensive career development platform offers tools for resume building, interview preparation, and career guidance. Start your journey to professional success.</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Quick Start Guide →</a>
+                            <a href="#" class="card-link">Platform Overview →</a>
+                            <a href="#" class="card-link">System Requirements →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Builder Card -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="card-title">Build Your Resume</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Create professional resumes with our AI-powered builder. Choose from multiple templates, get real-time feedback, and optimize your resume for applicant tracking systems.</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Create New Resume →</a>
+                            <a href="#" class="card-link">Browse Templates →</a>
+                            <a href="#" class="card-link">AI Writing Assistant →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interview Preparation Card -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="card-title">Prepare for Interviews</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Practice with AI-powered mock interviews and generate relevant questions for your target role. Get detailed feedback and improve your interview performance.</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Start Mock Interview →</a>
+                            <a href="#" class="card-link">Generate Questions →</a>
+                            <a href="#" class="card-link">Performance Analytics →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resume Screener Card -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3 class="card-title">Resume Screener</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Analyze your resume against job descriptions to get a compatibility score. Receive detailed feedback on how to improve your resume for better results.</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Screen Resume →</a>
+                            <a href="#" class="card-link">View Sample Report →</a>
+                            <a href="#" class="card-link">Optimization Tips →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Interview Card -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="card-title">AI Interview System</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Experience realistic interview simulations powered by advanced AI. Practice with industry-specific questions and receive comprehensive performance analysis.</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Start AI Interview →</a>
+                            <a href="#" class="card-link">Question Library →</a>
+                            <a href="#" class="card-link">Interview History →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Generator Card -->
+                <div class="content-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3 class="card-title">Question Generator</h3>
+                    </div>
+                    <div class="card-content">
+                        <p>Generate targeted interview questions based on job roles, experience levels, and technical requirements. Create custom question sets for practice.</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link">Generate Questions →</a>
+                            <a href="#" class="card-link">Question Categories →</a>
+                            <a href="#" class="card-link">Custom Templates →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+{
+  "personalInfo": {
+    "name": "John Doe",
+    "phone": "1234567890",
+    "email": "john@example.com",
+    "linkedin": "https://linkedin.com/in/johndoe",
+    "github": "https://github.com/johndoe",
+    "location": {
+      "city": "New York",
+      "country": "USA"
+    }
+  },
+  "professionalSummary": "Experienced software developer with 5 years in web development.",
+  "skills": [
+    {
+      "category": "technical",
+      "items": ["JavaScript", "React", "Node.js"]
+    },
+    {
+      "category": "soft",
+      "items": ["Communication", "Teamwork"]
+    }
+  ],
+  "workExperience": [
+    {
+      "jobTitle": "Software Engineer",
+      "company": "Tech Corp",
+      "location": {
+        "city": "New York",
+        "country": "USA"
+      },
+      "duration": "2020-2023",
+      "bullets": ["Developed web applications", "Collaborated with team"]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "technologies": ["React", "CSS"],
+      "bullets": ["Built responsive website", "Integrated APIs"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science",
+      "institution": "University of Example",
+      "duration": "2016-2020",
+      "cgpaPercentage": "3.8 GPA"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Developer",
+      "authority": "Amazon",
+      "completionYear": "2022"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Employee of the Month",
+      "issuer": "Tech Corp",
+      "date": "2022"
+    }
+  ],
+  "volunteer": [
+    {
+      "role": "Volunteer Developer",
+      "organization": "Code for Good",
+      "duration": "2021-2022",
+      "contributions": ["Built apps for non-profits"]
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "proficiency": "Native"
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Smith",
+      "designation": "Manager",
+      "company": "Tech Corp",
+      "email": "jane@techcorp.com",
+      "phone": "0987654321"
+    }
+  ]
+}

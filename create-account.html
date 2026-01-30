@@ -1,0 +1,80 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavAI - Create Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left Side - Create Account Form -->
+        <div class="login-form-section">
+            <div class="form-container">
+                <!-- App Name -->
+                <div class="app-header">
+                    <h1 class="app-name">NavAI</h1>
+                </div>
+
+                <!-- Create Account Text -->
+                <div class="welcome-text">
+                    <h2 class="welcome-title">Create your account</h2>
+                    <p class="welcome-subtitle">
+                        Join NavAI and start your career growth journey today.
+                    </p>
+                </div>
+
+                <!-- Create Account Form -->
+                <form class="login-form" id="createAccountForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email-ID</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Create a password" required autocomplete="new-password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required autocomplete="new-password">
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="checkmark"></span>
+                            I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="login-btn">Sign Up</button>
+
+                    <!-- Navigation Text -->
+                    <div class="navigation-text">
+                        <span>Already have an account? </span>
+                        <a href="index.html" class="create-account-link">Back to login page?</a>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+        <!-- Right Side - Illustration -->
+        <div class="illustration-section">
+            <img src="NavAI create account image.png" alt="NavAI Create Account Illustration - Character with Dog" class="main-illustration">
+        </div>
+    </div>
+
+    <script src="create-account.js"></script>
+</body>
+</html>
