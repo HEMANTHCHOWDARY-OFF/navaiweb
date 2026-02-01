@@ -21,14 +21,23 @@ app.use(express.json());
 const upload = multer({ dest: 'uploads/' });
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/navai', {
+
+// Use MONGO_URI from env, prevent crashing if undefined (though it should be checked earlier)
+const mongoUri = process.env.MONGO_URI;
+
+if (!mongoUri) {
+  console.error('FATAL ERROR: MONGO_URI is not defined in .env');
+  process.exit(1);
+}
+
+mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   retryWrites: true,
   w: 'majority'
 })
-.then(() => console.log('MongoDB connected successfully'))
-.catch(err => console.error('MongoDB connection error:', err));
+  .then(() => console.log('MongoDB Atlas connected successfully'))
+  .catch(err => console.error('MongoDB Atlas connection error:', err));
 
 // Routes
 app.use('/api/users', require('./routes/users'));
