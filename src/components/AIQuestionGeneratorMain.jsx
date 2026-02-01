@@ -229,21 +229,70 @@ const AIQuestionGeneratorMain = () => {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">Create Question Set</h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Job Role / Topic
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="e.g., Java Developer, HR, Data Science"
-                    value={manualFormData.jobRole}
-                    onChange={(e) => handleManualInputChange('jobRole', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
-                  />
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+                {/* Left Column: Inputs */}
+                <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Job Role / Topic
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="e.g., Java Developer, HR, Data Science"
+                      value={manualFormData.jobRole}
+                      onChange={(e) => handleManualInputChange('jobRole', e.target.value)}
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Difficulty Level
+                    </label>
+                    <select
+                      value={manualFormData.difficulty}
+                      onChange={(e) => handleManualInputChange('difficulty', e.target.value)}
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    >
+                      <option value="Easy">Easy</option>
+                      <option value="Medium">Medium</option>
+                      <option value="Hard">Hard</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Question Type
+                    </label>
+                    <select
+                      value={manualFormData.questionType}
+                      onChange={(e) => handleManualInputChange('questionType', e.target.value)}
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    >
+                      <option value="Multiple Choice">Multiple Choice</option>
+                      <option value="Coding">Coding</option>
+                      <option value="Behavioral">Behavioral</option>
+                      <option value="Open-ended">Open-ended</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Number of Questions
+                    </label>
+                    <input
+                      type="number"
+                      min="1"
+                      max="15"
+                      value={manualFormData.numberOfQuestions}
+                      onChange={(e) => handleManualInputChange('numberOfQuestions', parseInt(e.target.value))}
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    />
+                  </div>
                 </div>
 
-                <div className="md:col-span-2">
+                {/* Right Column: Instructions */}
+                <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Instructions for AI
                   </label>
@@ -251,53 +300,7 @@ const AIQuestionGeneratorMain = () => {
                     placeholder="Provide specific instructions for generating questions, e.g., 'Focus on Spring Boot framework, include practical coding scenarios, emphasize problem-solving skills...'"
                     value={manualFormData.instructions}
                     onChange={(e) => handleManualInputChange('instructions', e.target.value)}
-                    rows={4}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue resize-vertical"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Difficulty Level
-                  </label>
-                  <select
-                    value={manualFormData.difficulty}
-                    onChange={(e) => handleManualInputChange('difficulty', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
-                  >
-                    <option value="Easy">Easy</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Hard">Hard</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Question Type
-                  </label>
-                  <select
-                    value={manualFormData.questionType}
-                    onChange={(e) => handleManualInputChange('questionType', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
-                  >
-                    <option value="Multiple Choice">Multiple Choice</option>
-                    <option value="Coding">Coding</option>
-                    <option value="Behavioral">Behavioral</option>
-                    <option value="Open-ended">Open-ended</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Number of Questions
-                  </label>
-                  <input
-                    type="number"
-                    min="1"
-                    max="15"
-                    value={manualFormData.numberOfQuestions}
-                    onChange={(e) => handleManualInputChange('numberOfQuestions', parseInt(e.target.value))}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-blue resize-vertical h-[calc(100%-2rem)] min-h-[160px]"
                   />
                 </div>
               </div>
